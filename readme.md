@@ -12,4 +12,4 @@ file in vim.
 Using [Pathogen](https://github.com/tpope/vim-pathogen):
 
 `$ git clone https://github.com/koryschneider/vim-trim
-~/vim/bundle/vim-trim`
+~/.vim/bundle/vim-trim`
