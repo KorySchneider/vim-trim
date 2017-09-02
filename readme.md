@@ -3,7 +3,7 @@
 This is a small plugin to remove all trailing whitespace from the currently open
 file in vim.
 
-### Usage: `:Trim`
+### Usage `:Trim`
 
 ### Installation
 
