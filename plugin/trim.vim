@@ -6,7 +6,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-function! s:Trim()
+function! s:Trim() abort
   " Save cursor position
   winsaveview()
 
