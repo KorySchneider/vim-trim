@@ -1,11 +1,25 @@
-command! -bang Trim :call Trim()
+" Only load plugin once
+if exists("g:trim") | finish | endif
 
-function Trim()
-  let curPos = getpos(".") " Get current cursor position
+" Reset compatible
+let s:save_cpo = &cpo
+set cpo&vim
 
-  while search(" $", "n") !=# 0 " Remove trailing whitespace
-    :%s/ $//g
+
+function! s:Trim()
+  " Save cursor position
+  winsaveview()
+
+  " Remove trailing whitespace
+  while search(" $", "n") !=# 0
+    %s/\s\+$//e
   endwhile
 
-  call setpos(".", curPos) " Return to cursor position
+  " Restore cursor position
+  winrestview()
 endfunction
+
+
+" Restore compatible setting
+let &cpo = s:save_cpo
+unlet s:save_cpo
