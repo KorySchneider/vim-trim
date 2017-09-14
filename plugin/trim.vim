@@ -12,10 +12,10 @@ function! Trim() abort
   let pos = getpos(".")
 
   " Remove trailing whitespace
-  %s/\s\+$//e
+  silent! %s/\s\+$//e
 
   " Remove trailing empty lines
-  %s#\($\n\s*\)\+\%$##
+  silent! %s#\($\n\s*\)\+\%$##
 
   " Restore cursor position
   call setpos(".", pos)
