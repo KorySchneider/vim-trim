@@ -14,6 +14,9 @@ function! Trim() abort
   " Remove trailing whitespace
   silent! %s/\s\+$//e
 
+  " Remove leading empty lines
+  silent! %s#\%^\($\n\s*\)\+##
+
   " Remove trailing empty lines
   silent! %s#\($\n\s*\)\+\%$##
 
