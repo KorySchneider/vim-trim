@@ -9,10 +9,12 @@ command! -bang Trim :call Trim()
 
 function! Trim() abort
   " Save cursor position
-  let pos = getpos(".")
+  let l:pos = getpos(".")
 
-  " Remove trailing whitespace
-  silent! %s/\s\+$//e
+  " Remove trailing whitespace except on markdown files
+  if !(&ft == "markdown")
+    silent! %s/\s\+$//e
+  endif
 
   " Remove leading empty lines
   silent! %s#\%^\($\n\s*\)\+##
