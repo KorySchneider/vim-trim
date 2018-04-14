@@ -1,7 +1,9 @@
 # vim-trim
 
-This is a small plugin to remove all trailing whitespace, leading empty lines and trailing empty lines from the currently open
+This is a small plugin to remove all trailing whitespace*, leading empty lines and trailing empty lines from the currently open
 file in vim.
+
+*\*Trailing lines in markdown files are untouched as they can be used for line breaks.*
 
 ### Usage
 
