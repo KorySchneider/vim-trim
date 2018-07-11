@@ -19,9 +19,6 @@ function! Trim() abort
   " Remove leading empty lines
   silent! %s#\%^\($\n\s*\)\+##
 
-  " Remove trailing empty lines
-  silent! %s#\($\n\s*\)\+\%$##
-
   " Restore cursor position
   call setpos(".", pos)
 endfunction
